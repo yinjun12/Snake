@@ -1,0 +1,31 @@
+
+#include<iostream>
+#include<time.h>
+#include<random>
+#include<Windows.h>
+using namespace std;
+struct Body
+{
+	short x, y;
+	struct Body *next;
+};
+int sleeptime = 220;
+int Food = 0;
+int dir = 4;//控制移动方向，1是向上，2是向下，3是向左，4是向右
+int score = 0;//分数为0
+int food_x = 0, food_y = 0;//食物坐标
+struct Body *body001;//定义蛇身头体
+void Pos(short x, short y);//移动光标
+void CreateMap();//创建地图
+void CreateFood();//创建食物
+void CreateSnake();//初始化蛇，并打印出来
+int TouchItself();//判定是否撞到自己
+int TouchWall();//判定是否撞到墙
+void SnakeMove();//蛇移动一步
+void HaveFood();//吃食物
+void NotHaveFood(struct Body*p_forward, struct Body *p, int dir);//不吃食物
+void InitSnake();//初始化蛇
+void Start();//开始
+void End();
+void Pause();//暂停
+void GamesCircle();//游戏循环
