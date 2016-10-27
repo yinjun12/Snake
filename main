@@ -1,0 +1,9 @@
+#include"Snake.h"
+int _tmain(int argc, _TCHAR* argv[])
+{
+	Start();
+	Init();
+	GamesCircle();
+	End();
+	return 0;
+}
